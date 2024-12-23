@@ -3,8 +3,8 @@
 Contributors: priyanshumittal
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post,custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
 Requires at least: 4.5
-Tested up to: 6.6
-Stable tag: 3.5
+Tested up to: 6.7
+Stable tag: 3.5.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,8 @@ Appointment is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+@version 3.5.1
+1. Fixed customizer issue.
 @version 3.5
 1. Updated the options page.
 @version 3.4.9

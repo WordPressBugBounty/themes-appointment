@@ -68,3 +68,6 @@ font-size:14px !important;
 #customize-control-appointment_options-theme_color input {display:none;}
 
 #accordion-section-appointment_email_course_section h3{ font-size: 14px;font-weight: 700;}
+.accordion-section-title button.accordion-trigger {
+    height: auto ! important;
+}
