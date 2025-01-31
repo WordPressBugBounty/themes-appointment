@@ -7,7 +7,7 @@ get_header();
 <div class="clearfix"></div>
 <?php
 if ( function_exists( 'webriti_companion_activate' ) ):
-    appointment_slider();
+    webriti_companion_appointment_slider();
 else:
 ?>
     <div class="alert alert-warning alert-dismissible text-center">

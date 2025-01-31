@@ -11,8 +11,8 @@
 					<h3><?php esc_html_e( "Starter Sites", 'appointment' ); ?></h3>
 					<div style="border-top: 1px solid #eaeaea;">
 						<p style="margin-top: 16px;">
-							<?php _e( 'To use Starter Sites, you need to activate the <strong>Webriti Companion</strong> and <strong>One Click Demo Import</strong> plugins.', 'appointment' ); ?>
-							<a target="_self" href="#recommended_actions" class="appointment-custom-class"><?php esc_html_e( 'Click here','appointment');?></a>
+							<?php _e( 'To use Starter Sites, you need to import demo.', 'appointment' ); ?>
+							<a target="_self" href="#free_pro_demo" class="appointment-free-pro-demo-class"><?php esc_html_e( 'Click here','appointment');?></a>
 						</p>
 					</div>
 				</div>
@@ -30,7 +30,7 @@
 					<h3><?php esc_html_e( "Start Customizing", 'appointment' ); ?></h3>
 					<div style="border-top: 1px solid #eaeaea;">
 						<p style="margin-top: 16px;">
-							<?php esc_html_e( 'After activating recommended plugins , now you can start customization.', 'appointment' ); ?>
+							<?php esc_html_e( 'If you prefer not to use our prebuilt starter sites and want to create a website from scratch, you can use the Customizer option. After activating the recommended plugins, you can begin customizing your website.', 'appointment' ); ?>
 
 						</p>
 						<p><a target="_blank" href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Go to Customizer','appointment');?></a></p>

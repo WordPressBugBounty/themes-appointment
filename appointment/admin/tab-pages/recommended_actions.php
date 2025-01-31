@@ -4,10 +4,12 @@ $appointment_actions_todo = get_option('recommending_actions', false);
 ?>
 <div id="recommended_actions" class="appointment-tab-pane panel-close">
     <div class="action-list">
-        <?php if ($appointment_actions): foreach ($appointment_actions as $key => $appointment_actionValue): ?>
+        <?php if ($appointment_actions): foreach ($appointment_actions as $key => $appointment_actionValue): 
+            $excluded_ids = ['install_spice-starter-sites', 'install_one-click-demo-import', 'install_spice-blocks', 'install_elementor']; 
+            if (!in_array($appointment_actionValue['id'], $excluded_ids)):?>
                 <div class="action" id="<?php echo esc_attr($appointment_actionValue['id']);?>">
                     <div class="recommended_box col-md-6 col-sm-6 col-xs-12">
-                        <img width="772" height="180" src="<?php echo APPOINTMENT_TEMPLATE_DIR_URI . '/images/' . str_replace(' ', '-', strtolower($appointment_actionValue['title'])) . '.png'; ?>">
+                        <img width="696" height="180" src="<?php echo APPOINTMENT_TEMPLATE_DIR_URI . '/images/' . str_replace(' ', '-', strtolower($appointment_actionValue['title'])) . '.png'; ?>">
                         <div class="action-inner">
                             <h3 class="action-title"><?php echo esc_html($appointment_actionValue['title']); ?></h3>
                             <div class="action-desc"><?php echo esc_html($appointment_actionValue['desc']); ?></div>
@@ -26,7 +28,8 @@ $appointment_actions_todo = get_option('recommending_actions', false);
                         </div>
                     </div>
                 </div>
-            <?php endforeach;
+            <?php endif;
+            endforeach;
         endif; ?>
     </div>
 </div>

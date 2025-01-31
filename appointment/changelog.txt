@@ -1,3 +1,7 @@
+@version 3.5.2
+1. Updated the options page.
+2. Added two starter sites for Appointment and Appointment Pro.
+3. Imported starter sites from the Spice Starter Sites plugin instead of the One Click Demo Import plugin.
 @version 3.5.1
 1. Fixed customizer issue.
 @version 3.5

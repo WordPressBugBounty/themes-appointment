@@ -85,64 +85,6 @@ if ( ! function_exists( 'appointment_customizer_preview_scripts' ) ) {
 }
 add_action( 'customize_preview_init', 'appointment_customizer_preview_scripts' ); 
 
-add_action('tgmpa_register', 'appointment_register_required_plugins');
-
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register five plugins:
- * - one included with the TGMPA library
- * - two from an external source, one from an arbitrary source, one from a GitHub repository
- * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
- *
- * The variables passed to the `tgmpa()` function should be:
- * - an array of plugin arrays;
- * - optionally a configuration array.
- * If you are not changing anything in the configuration array, you can remove the array and remove the
- * variable from the function call: `tgmpa( $plugins );`.
- * In that case, the TGMPA default settings will be used.
- *
- * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
- */
-function appointment_register_required_plugins() {
-    /*
-     * Array of plugin arrays. Required keys are name and slug.
-     * If the source is NOT from the .org repo, then source is also required.
-     */
-    $plugins = array(
-        // This is an example of how to include a plugin from the WordPress Plugin Repository.
-        array(
-            'name' => 'Carousel, Recent Post Slider and Banner Slider',
-            'slug' => 'spice-post-slider',
-            'required' => false,
-        )
-    );
-
-    /*
-     * Array of configuration settings. Amend each line as needed.
-     *
-     * TGMPA will start providing localized text strings soon. If you already have translations of our standard
-     * strings available, please help us make TGMPA even better by giving us access to these translations or by
-     * sending in a pull-request with .po file(s) with the translations.
-     *
-     * Only uncomment the strings in the config array if you want to customize the strings.
-     */
-    $config = array(
-        'id' => 'tgmpa', // Unique ID for hashing notices for multiple instances of TGMPA.
-        'default_path' => '', // Default absolute path to bundled plugins.
-        'menu' => 'tgmpa-install-plugins', // Menu slug.
-        'has_notices' => true, // Show admin notices or not.
-        'dismissable' => true, // If false, a user cannot dismiss the nag message.
-        'dismiss_msg' => '', // If 'dismissable' is false, this message will be output at top of nag.
-        'is_automatic' => false, // Automatically activate plugins after installation or not.
-        'message' => '', // Message to output right before the plugins table.
-    );
-
-    tgmpa($plugins, $config);
-}
-
-// Appointment Info Page
-//require( APPOINTMENT_THEME_FUNCTIONS_PATH . '/appointment-info/welcome-screen.php');
 // Custom Category control
 require( APPOINTMENT_THEME_FUNCTIONS_PATH . '/custom-controls/select/categorydrop-downcustomcontrol.php');
 
@@ -315,46 +257,48 @@ if( $appointment_theme->name == 'Appointment' || $appointment_theme->name == 'Ap
         }
         if ( function_exists('webriti_companion_activate')) {
             return;
-        }?>
+        }
+        $id = $GLOBALS['hook_suffix'];
+        if('themes.php'==$id){?>
 
-        <div class="updated notice is-dismissible appointment-theme-notice">
+            <div class="updated notice is-dismissible appointment-theme-notice">
 
-            <div class="owc-header">
-                <h2 class="theme-owc-title">               
-                    <svg height="60" width="60" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70"><defs><style>.cls-1{font-size:33px;font-family:Verdana-Bold, Verdana;font-weight:700;}</style></defs><title>Artboard 1</title><text class="cls-1" transform="translate(-0.56 51.25)">WC</text></svg>
-                    <?php echo esc_html('Webriti Companion','appointment');?>
-                </h2>
+                <div class="owc-header">
+                    <h2 class="theme-owc-title">               
+                        <svg height="60" width="60" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70"><defs><style>.cls-1{font-size:33px;font-family:Verdana-Bold, Verdana;font-weight:700;}</style></defs><title>Artboard 1</title><text class="cls-1" transform="translate(-0.56 51.25)">WC</text></svg>
+                        <?php echo esc_html('Webriti Companion','appointment');?>
+                    </h2>
+                </div>
+
+                <div class="appointment-theme-content">
+                    <h3><?php printf (esc_html__('Thank you for installing the %1$s theme.', 'appointment'), esc_html($theme_name)); ?></h3>
+
+                    <p><?php esc_html_e( 'We highly recommend you to install and activate the', 'appointment' ); ?>
+                        <b><?php esc_html_e( 'Webriti Companion', 'appointment' ); ?></b> plugin.
+                        <br>
+                        <?php esc_html_e( 'This plugin will unlock enhanced features to build a beautiful website.', 'appointment' ); ?>
+                    </p>
+                    <button class="install-plugin-button-welcome-page" data-plugin-url="<?php echo esc_url( 'https://webriti.com/extensions/webriti-companion.zip');?>" data-plugin-slug="<?php esc_attr_e( 'webriti-companion','appointment');?>"><?php echo esc_html__( 'Install', 'appointment' ); ?></button>
+                </div>
             </div>
-
-            <div class="appointment-theme-content">
-                <h3><?php printf (esc_html__('Thank you for installing the %1$s theme.', 'appointment'), esc_html($theme_name)); ?></h3>
-
-                <p><?php esc_html_e( 'We highly recommend you to install and activate the', 'appointment' ); ?>
-                    <b><?php esc_html_e( 'Webriti Companion', 'appointment' ); ?></b> plugin.
-                    <br>
-                    <?php esc_html_e( 'This plugin will unlock enhanced features to build a beautiful website.', 'appointment' ); ?>
-                </p>
-                <button id="install-plugin-button-welcome-page" data-plugin-url="<?php echo esc_url( 'https://webriti.com/extensions/webriti-companion.zip');?>"><?php echo esc_html__( 'Install', 'appointment' ); ?></button>
-            </div>
-        </div>
-        
-        <script type="text/javascript">
-            jQuery(function($) {
-            $( document ).on( 'click', '.appointment-theme-notice .notice-dismiss', function () {
-                var type = $( this ).closest( '.appointment-theme-notice' ).data( 'notice' );
-                $.ajax( ajaxurl,
-                  {
-                    type: 'POST',
-                    data: {
-                      action: 'dismissed_notice_handler',
-                      type: type,
-                    }
+            
+            <script type="text/javascript">
+                jQuery(function($) {
+                $( document ).on( 'click', '.appointment-theme-notice .notice-dismiss', function () {
+                    var type = $( this ).closest( '.appointment-theme-notice' ).data( 'notice' );
+                    $.ajax( ajaxurl,
+                      {
+                        type: 'POST',
+                        data: {
+                          action: 'dismissed_notice_handler',
+                          type: type,
+                        }
+                      } );
                   } );
-              } );
-          });
-        </script>
-    <?php
-
+              });
+            </script>        
+        <?php
+        }
     }
     add_action( 'admin_notices', 'appointment_admin_plugin_notice_warn' );
     add_action( 'wp_ajax_dismissed_notice_handler', 'appointment_ajax_notice_handler');

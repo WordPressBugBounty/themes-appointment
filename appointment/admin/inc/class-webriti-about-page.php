@@ -6,17 +6,17 @@
 if (!class_exists('Appointment_About_Page')) {
 	class Appointment_About_Page {
 
-		protected static $instance;
-		private $options;
-		private $version = '1.0.0';
-		private $theme;
-		private $demo_link;
-		private $docs_link;
-		private $rate_link;
-		private $theme_page;
-		private $pro_link;
-		private $tabs;
-		private $action_count;
+		public static $instance;
+		public $options;
+		public $version = '1.0.0';
+		public $theme;
+		public $demo_link;
+		public $docs_link;
+		public $rate_link;
+		public $theme_page;
+		public $pro_link;
+		public $tabs;
+		public $action_count;
 		public $recommended_actions;
 
 		public static function get_instance() {
@@ -42,6 +42,7 @@ if (!class_exists('Appointment_About_Page')) {
 
 			/* load welcome screen */
 			add_action( 'appointment_info_screen', array( $this, 'get_started' ), 	    10 );
+			add_action( 'appointment_info_screen', array( $this, 'free_pro_demo' ), 	    10);
 			add_action( 'appointment_info_screen', array( $this, 'github_file' ), 		            40 );
 			add_action( 'appointment_info_screen', array( $this, 'video_tab' ), 		            50 );
 			add_action( 'appointment_info_screen', array( $this, 'welcome_free_pro' ), 				50 );
@@ -59,7 +60,7 @@ if (!class_exists('Appointment_About_Page')) {
 	 */
 	public function style_and_scripts( $hook_suffix ) {
 
-		if ( 'toplevel_page_appointment-welcome' == $hook_suffix ) {
+		if ( 'toplevel_page_appointment-welcome' == $hook_suffix || 'admin_page_spice-settings-importer' == $hook_suffix) {
 
       		wp_enqueue_style('appointment-bootstrap-css',APPOINTMENT_TEMPLATE_DIR_URI.'/css/bootstrap.css');
 
@@ -189,6 +190,9 @@ if (!class_exists('Appointment_About_Page')) {
 		require_once( get_template_directory() . '/admin/tab-pages/video-detail.php' );
 	}
 
+	public function free_pro_demo() {
+		require_once( get_template_directory() . '/admin/tab-pages/free-pro-demo.php' );
+	}
 
 	/**
 	 * Free vs PRO
@@ -233,6 +237,11 @@ if (!class_exists('Appointment_About_Page')) {
 					'link'      => 'getting_started',
 					'name'      => esc_html__('Getting Started', 'appointment'),
 					'file_path' => get_template_directory() . '/admin/tab-pages/getting-started.php',
+				);
+			$tabs_array[]	= array(
+					'link'      => 'free_pro_demo',
+					'name'      => esc_html__('Starter Sites', 'appointment'),
+					'file_path' => get_template_directory() . '/admin/tab-pages/free-pro-demo.php',
 				);
 			$tabs_array[]	= 	array(
 					'link'      => 'recommended_actions',
@@ -351,9 +360,10 @@ if (!class_exists('Appointment_About_Page')) {
 				if($slug==='webriti-companion'){
 					$plugin_url = "https://webriti.com/extensions/webriti-companion.zip";
 					$button_html = sprintf(
-					    '<button id="install-plugin-button-options-page" class="button" data-plugin-url="%1$s">%2$s</button>',
+					    '<button class="install-plugin-button-options-page button" data-plugin-slug="%3$s" data-plugin-url="%1$s">%2$s</button>',
 					    esc_url($plugin_url),
-					    esc_html__('Install', 'appointment')
+					    esc_html__('Install', 'appointment'),
+					    esc_attr($slug)
 					);
 				}
 				else{
@@ -495,20 +505,34 @@ add_filter('appointment_useful_plugins', 'appointment_useful_plugins_array');
 
 function appointment_recommended_plugins_array($plugins){
 	$plugins[] = array(
+					'name'     	=> 'Spice Starter Sites',
+					'slug'     	=> 'spice-starter-sites',
+					'function'	=> '',
+					'class'     => 'Spice_Starter_Sites',
+					'desc'     	=> esc_html__('It is highly recommended that you install & activate the Spice Starter Sites plugin to unlock it to build a beautiful website using Elementor and Gutenberg layouts', 'appointment'),
+				);
+	$plugins[] = array(
 					'name'     	=> 'Webriti Companion',
 					'slug'     	=> 'webriti-companion',
 					'function'	=> 'webriti_companion_activate',
 					'class'     => '',
 					'desc'     	=> esc_html__('It is highly recommended that you install & activate the Webriti Companion plugin to have access to the advance Frontpage sections and other theme features', 'appointment'),
 				);
+	$plugins[] = array(
+					'name'     => 'Seo Optimized Images',
+					'slug'     => 'seo-optimized-images',
+					'function' => 'sobw_fs',
+					'class'	   => '',
+					'desc'     => esc_html__('It is recommended that you install & activate the Seo Optimized Images plugin to dynamically insert SEO Friendly alt attributes and title attributes to your Images.', 'appointment'),
+	);
 
 	$plugins[] = array(
-					'name'     	=> 'One Click Demo Import',
-					'slug'     	=> 'one-click-demo-import',
-					'function'	=> '',
-					'class'     => 'OCDI_Plugin',
-					'desc'     	=> esc_html__('It is recommended that you install & activate the One Click Demo Import plugin to import the default demo data and starter sites', 'appointment'),
-				);
+					'name'     => 'Yoast SEO',
+					'slug'     => 'wordpress-seo',
+					'function'	=> 'wpseo_auto_load',
+					'class'     => '',
+					'desc'     => esc_html__('To enable the display of breadcrumbs, please install and activate this plugin.', 'appointment'),
+			    );
 
 	$plugins[] = array(
 					'name'     	=> 'Spice Blocks',
@@ -528,19 +552,11 @@ function appointment_recommended_plugins_array($plugins){
 	$plugins[] = array(
 					'name'     	=> 'Elementor',
 					'slug'     	=> 'elementor',
-					'function'	=> 'elementor_load_plugin_textdomain',
+					'function'	=> 'elementor_fail_wp_version',
 					'class'     => '',
 					'desc'     	=> esc_html__('It is recommended that you install & activate the Elementor plugin to import the elementor starter sites', 'appointment'),
 				);
-
-
-	$plugins[] = array(
-					'name'     => 'Seo Optimized Images',
-					'slug'     => 'seo-optimized-images',
-					'function' => 'sobw_fs',
-					'class'	   => '',
-					'desc'     => esc_html__('It is recommended that you install & activate the Seo Optimized Images plugin to dynamically insert SEO Friendly alt attributes and title attributes to your Images.', 'appointment'),
-	);
+	
 	$plugins[] = array(
 					'name'     => 'Carousel, Recent Post Slider and Banner Slider',
 					'slug'     => 'spice-post-slider',

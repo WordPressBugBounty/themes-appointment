@@ -30,9 +30,43 @@ jQuery(document).ready(function() {
        jQuery('.appointment-nav-tabs li a[href="#recommended_actions"]').click();
     });
 
+     jQuery(".appointment-free-pro-demo-class").click(function(event){
+       event.preventDefault();
+       jQuery('.appointment-nav-tabs li a[href="#free_pro_demo"]').click();
+    });
+
      jQuery(".appointment-changelog-class").click(function(event){
        event.preventDefault();
        jQuery('.appointment-nav-tabs li a[href="#changelog"]').click();
     });
 
 });
+
+(function($){
+    
+$(document).ready(function() {
+    // Show all content by default
+    $('.tab-item').addClass('show');
+
+    $('.tab-button').on('click', function() {
+        var tab = $(this).data('tab');
+        
+        $('.tab-button').removeClass('active');
+        $(this).addClass('active');
+        
+        if (tab === 'all') {
+            $('.tab-item').addClass('show');
+        } else {
+            $('.tab-item').each(function() {
+                if ($(this).data('tab') === tab) {
+                    $(this).addClass('show');
+                } else {
+                    $(this).removeClass('show');
+                }
+            });
+        }
+    });
+});
+
+
+})(jQuery);

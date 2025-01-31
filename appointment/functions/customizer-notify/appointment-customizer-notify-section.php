@@ -254,7 +254,7 @@ class appointment_Customizer_Notify_Section extends WP_Customize_Section {
 										<div class="description">{{{ data.recommended_plugins[action].description }}}</div>
 										<# if( data.recommended_plugins[action].plugin_slug ){ #>
 											<div class="custom-action 01">
-												<button id="install-plugin-button-welcome-page" data-plugin-url="<?php echo esc_url( 'https://webriti.com/extensions/webriti-companion.zip');?>"><?php echo esc_html__( 'Install', 'appointment' ); ?></button>
+												<button class="install-plugin-button-welcome-page" data-plugin-url="<?php echo esc_url( 'https://webriti.com/extensions/webriti-companion.zip');?>" data-plugin-slug="<?php esc_attr_e( 'webriti-companion','appointment');?>"><?php echo esc_html__( 'Install', 'appointment' ); ?></button>
 											</div>
 										<# } #>
 									</div>

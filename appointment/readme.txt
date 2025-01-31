@@ -4,7 +4,7 @@ Contributors: priyanshumittal
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post,custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
 Requires at least: 4.5
 Tested up to: 6.7
-Stable tag: 3.5.1
+Stable tag: 3.5.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,10 @@ Appointment is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+@version 3.5.2
+1. Updated the options page.
+2. Added two starter sites for Appointment and Appointment Pro.
+3. Imported starter sites from the Spice Starter Sites plugin instead of the One Click Demo Import plugin.
 @version 3.5.1
 1. Fixed customizer issue.
 @version 3.5
