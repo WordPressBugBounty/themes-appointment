@@ -220,17 +220,19 @@ if (!function_exists('wp_body_open')) {
 
 }
 //Custom CSS compatibility
-$appointment_options = appointment_theme_setup_data();
-$appointment_current_options = wp_parse_args(get_option('appointment_options', array()), $appointment_options);
-if ($appointment_current_options['webrit_custom_css'] != '' && $appointment_current_options['webrit_custom_css'] != 'nomorenow') {
-    $appointment_old_custom_css = '';
-    $appointment_old_custom_css .= $appointment_current_options['webrit_custom_css'];
-    $appointment_old_custom_css .= (string) wp_get_custom_css(get_stylesheet());
-    $appointment_current_options['webrit_custom_css'] = 'nomorenow';
-    update_option('appointment_options', $appointment_current_options);
-    wp_update_custom_css_post($appointment_old_custom_css, array());
+function appointment_custom_css_compatibility() {
+    $appointment_options = appointment_theme_setup_data();
+    $appointment_current_options = wp_parse_args(get_option('appointment_options', array()), $appointment_options);
+    if ($appointment_current_options['webrit_custom_css'] != '' && $appointment_current_options['webrit_custom_css'] != 'nomorenow') {
+        $appointment_old_custom_css = '';
+        $appointment_old_custom_css .= $appointment_current_options['webrit_custom_css'];
+        $appointment_old_custom_css .= (string) wp_get_custom_css(get_stylesheet());
+        $appointment_current_options['webrit_custom_css'] = 'nomorenow';
+        update_option('appointment_options', $appointment_current_options);
+        wp_update_custom_css_post($appointment_old_custom_css, array());
+    }
 }
-
+add_action('wp_loaded', 'appointment_custom_css_compatibility');
 /**
  * Fix skip link focus in IE11.
  *
