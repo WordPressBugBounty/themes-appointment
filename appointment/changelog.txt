@@ -1,3 +1,7 @@
+@version 3.5.3.1
+1. Fixed demo import warning issue.
+@version 3.5.3
+1. Fixed error notice issue.
 @version 3.5.2
 1. Updated the options page.
 2. Added two starter sites for Appointment and Appointment Pro.

@@ -9,63 +9,69 @@ global $appointment_importer_filepath, $appointment_importer_pro_filepath, $appo
 
     $appointment_demo_link='https://webriti.com/startersites/appointment/';
     $appointment_local_import=$appointment_local_import_widget=$appointment_local_import_customizer=$preview_url=$appointment_preview_image_url='';
-    if ('Appointment' == $appointment_theme->name || 'Appointment Pro' == $appointment_theme->name) {
+    if ('Appointment' == $appointment_theme->name || 'Appointment Pro' == $appointment_theme->name || 'Appointment child' == $appointment_theme->name  || 'Appointment Child' == $appointment_theme->name || 'Appointment Pro Child' == $appointment_theme->name || 'Appointment Pro child' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/default/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/default/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/default/customizer.dat';
         $appointment_preview_url               = 'https://appointment.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/default.jpg';
     }
-    if ('Appointment Green' == $appointment_theme->name) {
+    else if ('Appointment Green' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/appointment-green/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/appointment-green/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/appointment-green/customizer.dat';
         $appointment_preview_url               = 'https://appointment-green.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/appointment-green.jpg';
     }
-    if ('Appointment Blue' == $appointment_theme->name) {
+    else if ('Appointment Blue' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/appointment-blue/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/appointment-blue/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/appointment-blue/customizer.dat';
         $appointment_preview_url               = 'https://appointment-blue.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/appointment-blue.jpg';
     }
-    if ('Appointment Red' == $appointment_theme->name) {
+    else if ('Appointment Red' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/appointment-red/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/appointment-red/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/appointment-red/customizer.dat';
         $appointment_preview_url               = 'https://appointment-red.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/appointment-red.jpg';
     }
-    if ('Appointee' == $appointment_theme->name) {
+    else if ('Appointee' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/appointee/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/appointee/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/appointee/customizer.dat';
         $appointment_preview_url               = 'https://appointee.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/appointee.jpg';
     }
-    if ('Appointment Dark' == $appointment_theme->name) {
+    else if ('Appointment Dark' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/appointment-dark/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/appointment-dark/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/appointment-dark/customizer.dat';
         $appointment_preview_url               = 'https://appointment-dark.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/appointment-dark.jpg';
     }
-    if ('vice' == $appointment_theme->name) {
+    else if ('vice' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/vice/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/vice/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/vice/customizer.dat';
         $appointment_preview_url               = 'https://vice.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/vice.jpg';
     }
-    if ('Shk Corporate' == $appointment_theme->name) {
+    else if ('Shk Corporate' == $appointment_theme->name) {
         $appointment_local_import               = $appointment_demo_link . 'lite/shk-corporate/content.xml';
         $appointment_local_import_widget        = $appointment_demo_link . 'lite/shk-corporate/widget.wie';
         $appointment_local_import_customizer    = $appointment_demo_link . 'lite/shk-corporate/customizer.dat';
         $appointment_preview_url               = 'https://shk-corporate.webriti.com/';
         $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/shk-corporate.jpg';
     }
-
+    else{
+        $appointment_local_import               = $appointment_demo_link . 'lite/default/content.xml';
+        $appointment_local_import_widget        = $appointment_demo_link . 'lite/default/widget.wie';
+        $appointment_local_import_customizer    = $appointment_demo_link . 'lite/default/customizer.dat';
+        $appointment_preview_url               = 'https://appointment.webriti.com/';
+        $appointment_preview_image_url          = $appointment_demo_link . 'thumbnail/default.jpg';
+    }
     if ('Appointment' == $appointment_theme->name || 'Appointment Pro' == $appointment_theme->name || 'Appointment child' == $appointment_theme->name  || 'Appointment Child' == $appointment_theme->name || 'Appointment Pro Child' == $appointment_theme->name || 'Appointment Pro child' == $appointment_theme->name) {
         $appointment_importer_filepath= array(
             'appointment'=>array(
