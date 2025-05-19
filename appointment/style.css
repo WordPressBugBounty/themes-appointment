@@ -5,7 +5,7 @@ Author: Webriti
 Author URI: https://www.webriti.com
 Description: Appointment WordPress Theme is a fully responsive and translation-ready theme that allows you to create stunning blogs and websites. The theme is well suited for companies, law firms, travel, photography, recipes, design, art, personal and any other creative websites and blogs. The theme is developed using Bootstrap 3 that makes it mobile and tablet friendly. It has various options in the WordPress Customizer to change the look of the theme. The theme customizer can be used to add your own custom header, favicon, logo, slides, services, callout and much more. In the premium version you can add different type of slides like video, aside, quote, status and standard, all of which have a different HTML look. There are a number of in-built widgets; sidebars with support for WPML, the Polylang translation WordPress plugin and Contact Form 7; a portfolio template, contact us, portfolio column layouts and many sections for business using the Homepage template. Appointment theme comes with various locales and this theme is General Data Protection Regulation ready as it comes with WP GDPR Compliant Just navigate to Appearance / Customize to start customizing.
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post, custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
-Version: 3.5.3.1
+Version: 3.5.4
 Requires at least: 4.5
 Tested up to: 6.7
 Requires PHP: 5.4
@@ -2476,3 +2476,95 @@ div#wc_appointment_post_slider {
     height: 2px;
 }
 .footer-widget-section h1:after,.footer-widget-section h2:after,.footer-widget-section h3:after,.footer-widget-section h4:after,.footer-widget-section h5:after,.footer-widget-section h6:after,.footer-widget-section .wp-block-search .wp-block-search__label:after,.footer-widget-title:after{left:0;background: #D1D1D1;width: 100%;z-index: 1;}
+.ap.header-module
+{
+    padding: 10px 0rem 10px 16px;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+}
+.navbar .search-box-outer .dropdown-menu {
+    top: 50px !important;
+    right: 0px;
+    padding: 0px;
+    width: 324px !important;
+    margin: 0px !important;
+    background-color: #fff !important;
+   visibility: visible;
+    opacity: 1;
+}
+.search-form input[type="submit"] {
+    background-color: #ee591f;
+    border: 1px solid #ee591f;
+}
+.navbar .search-box-outer .dropdown-menu {
+    top: 50px !important;
+    right: 0px;
+    padding: 0px;
+    width: 324px !important;
+    margin: 0px !important;
+    background-color: #fff !important;
+}
+@media (min-width: 1100px){
+.navbar .search-box-outer .dropdown-menu {
+    left: auto !important;
+}
+}
+.search-box-outer .dropdown-menu > li {
+    padding: 0.25rem 0.5rem !important;
+    border: none;
+    background: none;
+}
+.search-panel .form-container {
+    padding: 10px 0 2px 0;
+}
+.search-form {
+    width: 100%;
+    margin-bottom: 0;
+}
+.search-form label {
+    width: 98%;
+}
+.search-panel input[type="search"] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #0a0a0a;
+    line-height: 24px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 7px 90px 7px 7px;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+    font-size: large;
+}
+.search-box-outer .search-form input[type="submit"] {
+    padding: 8px 20px;
+}
+.search-form input[type="submit"] {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    transition: all .3s ease-in-out;
+    color: #fff;
+    font-weight: 600;
+    height: 36px;
+    left: auto;
+    right: 8px;
+    font-size: 15px;
+    top: 13px;
+    padding: 12px 25px;
+    border-radius: 0 3px 3px 0px;
+}
+.navbar .collapse.in .search-box-outer .dropdown-menu {
+    top: 10px !important;
+}
+@media only screen and (min-width: 200px) and (max-width: 1100px) {
+    .collapse.in .search-box-outer .dropdown-menu {
+        position: relative !important;
+    }
+}

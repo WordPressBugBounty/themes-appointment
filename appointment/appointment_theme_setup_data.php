@@ -19,8 +19,9 @@ function appointment_theme_setup_data()
 	'twitter_media_enabled' => 1,
 	'linkedin_media_enabled' => 1,
 	'webrit_custom_css' => '',
-  'link_color' => '#ee591f',
-  'link_color_enable' => false,
+  	'link_color' => '#ee591f',
+  	'link_color_enable' => false,
+  	'appointment_search_enable' => false,
 
 	//Slider Default settings
 	'home_banner_enabled' => '',

@@ -59,6 +59,7 @@ function appointment_custom_light() {
 			#calendar_wrap table > thead > tr > th,	#calendar_wrap a,	table tbody a, table tbody a:hover,	table tbody a:focus, .textwidget a:hover,	.format-quote p:before,	td#prev a, td#next a,	dl > dd > a, dl > dd > a:hover, .rsswidget:hover,	.recentcomments a:hover, p > a, p > a:hover,	ul > li > a:hover, tr.odd a, tr.even a,	p.wp-caption-text a, .footer-copyright a, .footer-copyright a:hover, body .service-section3 .service-area:hover i.fa, body .service-section1 .service-area:hover i.fa {
 				color: <?php echo $link_color; ?>;
 			}
+			.search-panel .search-form input[type="submit"]{background: <?php echo $link_color; ?>;border: 1px solid <?php echo $link_color; ?>;}
 
 			/* Border colors */
 			.footer-widget-tags a:hover , .sidebar-widget > .input-group > .input-group-addon, .sidebar-widget-tags a:hover, .blog-pagination a:hover, .blog-pagination a.active, .tagcloud a:hover, .media-body input[type=submit], .sidebar-widget input[type=submit], .footer-widget-column input[type=submit] {

@@ -174,6 +174,33 @@ function appointment_header_customizer($wp_customize) {
 		'navxt'  => 'NavXT'
 		)
 	));
+
+    //Toggle Search
+    $wp_customize->add_section('search_section',
+        array(
+            'title'     =>  esc_html__('Search','appointment'),
+            'panel'     =>  'header_options',
+            'priority'  =>  3   
+        )
+    );
+
+    $wp_customize->add_setting(
+      'appointment_options[appointment_search_enable]',
+        array(
+          'default' => false,
+          'capability'     => 'edit_theme_options',
+          'sanitize_callback' => 'appointment_sanitize_checkbox',
+          'type' => 'option',
+        )
+    );
+    $wp_customize->add_control(
+      'appointment_options[appointment_search_enable]',
+        array(
+          'label' => __('Disable Search Icon','appointment'),
+          'section' => 'search_section',
+          'type' => 'checkbox',
+      )
+    );
 }
 
 add_action('customize_register', 'appointment_header_customizer');

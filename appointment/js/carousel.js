@@ -1,4 +1,11 @@
 jQuery(document).ready(function(){
+
+/* Toggle serach icon at menu */
+jQuery('.navbar-default .nav .header-module .search-box-outer a.search-icon').on('click',function(e) {
+	e.preventDefault();
+   jQuery('.nav .search-box-outer ul.dropdown-menu').toggle('addSerchBox');
+ });
+
 jQuery('#carousel-example-generic').carousel({
   pause:"hover",
   keyboard: true
@@ -18,4 +25,3 @@ jQuery('a,input').each(function(){
 });
 
 });
-	

@@ -132,7 +132,9 @@ if($appointment_enable_content_typography == true)
 				line-height: <?php echo intval(get_theme_mod('p_line_height','25')).'px'; ?>;
 		}
 		/* Button text */
-		body .page-builder .blog-lg-area-left .wp-block-button__link, body .slide-btn-sm, body .callout-btn1, body .callout-btn2, body .blog-btn-sm, body a.more-link, body input[type="submit"], body .wp-block-latest-posts__post-excerpt .slide-btn-area-sm a{
+		body .page-builder .blog-lg-area-left .wp-block-button__link, body .slide-btn-sm, body .callout-btn1, body .callout-btn2, body .blog-btn-sm, body a.more-link, body input[type="submit"], body .wp-block-latest-posts__post-excerpt .slide-btn-area-sm a,
+		body .search-panel .search-form input[type="submit"]
+		{
 				font-size:<?php echo intval(get_theme_mod('button_text_typography_fontsize','16')).'px'; ?>;
 				font-family:<?php echo esc_attr(get_theme_mod('button_text_typography_fontfamily','Open Sans')); ?>;
 				line-height: <?php echo intval(get_theme_mod('button_line_height','25')).'px'; ?>;
