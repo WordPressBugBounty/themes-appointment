@@ -25,6 +25,9 @@
 							<p><?php esc_html_e( 'Various Page Templates included in the Appointment Premium Theme','appointment' ); ?></p>
 						</li>
 						<li>
+							<span class="plan-feature"><i class="fa fa-check-circle-o green-icon"></i> <?php esc_html_e( 'Search Effect','appointment' ); ?></span>
+						</li>
+						<li>
 							<span class="plan-feature"><i class="fa fa-check-circle-o green-icon"></i> <?php esc_html_e( 'Mobile Friendly','appointment' ); ?></span>
 							<p><?php esc_html_e( 'Responsive layout in all devices','appointment' ); ?></p>
 						</li>
@@ -83,6 +86,7 @@
            				<li style="font-size:16px; line-height:25px; padding:28px"><?php echo "2"; ?> </li>
 						<li style="font-size:16px; line-height:25px; padding:28px"><?php esc_html_e("Slider [Unlimited Slides], Widget Area Below Slider, Services [6 Services], Callout Section, Latest News","appointment"); ?> </li>
 						<li style="font-size:16px; line-height:25px; padding:28px"><?php esc_html_e('Homepage Template and Full-Width Page Template','appointment'); ?> </li>
+						<li style="font-size:16px; line-height:25px; padding:28px"><?php esc_html_e('Toggle Search','appointment'); ?> </li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-no-alt red"></span></li>
@@ -108,6 +112,8 @@
 						<li style="font-size:16px; line-height:25px; padding:19px"><?php esc_html_e("Top Header, Slider [Unlimited Slides], Services [9 Services], Callout, Portfolio [Unlimited Projects], Latest News, Clients, Testimonials and Custom Widgets","appointment"); ?></li>
 						<li style="font-size:16px; line-height:25px; padding:18px">
 						<?php esc_html_e("About Us, Services, Portfolio, Blog Left & Right Sidebars, Blog Full Width, Page Full Width, Contact Page and much more.","appointment"); ?></li>
+						<li style="font-size:16px; line-height:25px; padding:18px">
+						<?php esc_html_e("There are Three types of search effect, Toggle Search with ajax live search, Lightbox Search With Dark Mode and last one is Lightbox Search With Light Mode","appointment"); ?></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
