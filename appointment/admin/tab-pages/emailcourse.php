@@ -26,7 +26,7 @@
 				</div>
 			</div>	
 			<div class="offer-content clearfix">
-			<div class="media pricing-content text-center padding10">
+			<div class="media d-flex pricing-content text-center padding10">
 				<div class="media-body">
 					<a href="<?php echo esc_url('https://webriti.com/website-email-course/');?>" target="_blank" class="btn btn-info btn-lg" id="email_course"><?php esc_html_e('JOIN COURSE','appointment' ); ?></a>
 				</div>

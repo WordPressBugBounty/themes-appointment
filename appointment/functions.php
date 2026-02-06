@@ -174,7 +174,7 @@ add_filter('wp_title', 'appointment_title', 10, 2);
 add_filter('get_avatar', 'appointment_add_gravatar_class');
 
 function appointment_add_gravatar_class($class) {
-    $class = str_replace("class='avatar", "class='img-responsive img-circle", $class);
+    $class = str_replace("class='avatar", "class='img-fluid rounded-circle", $class);
     return $class;
 }
 //home slider

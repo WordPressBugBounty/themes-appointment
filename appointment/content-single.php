@@ -3,7 +3,7 @@
 	<?php appointment_aside_meta_content(); ?>
 		<div class="media-body">
 			<?php // Check Image size for fullwidth template
-				 appointment_post_thumbnail('','img-responsive');
+				 appointment_post_thumbnail('','img-fluid');
 				appointment_post_meta_content();
 				?>
 				<?php if( !is_single() ){ ?>

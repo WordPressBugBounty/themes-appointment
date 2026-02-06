@@ -4,8 +4,8 @@
  */
 ?>
 <div id="free_vs_pro" class="appointment-tab-pane panel-close">
-    <div class="row pricing1">
-		<div class="col-md-12">
+    <div class="pricing1">
+		<div class="col-md-12 row">
 			<div class="col-md-4 padding0">
 				<div class="plan text-center">
 					<header>
@@ -125,8 +125,8 @@
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
 						<li><span class="dashicons-before dashicons-yes green"></span></li>
-						<li style="font-size:16px; line-height:80px; padding:15px;"><a href="<?php echo esc_url('https://webriti.com/support/categories/appointment'); ?>" target="_blank">
-						<?php esc_html_e('Webriti Support Forum','appointment'); ?></a></li>
+						<li style="font-size:16px; line-height:80px; padding:15px;"><a href="<?php echo esc_url('https://customers.freemius.com/login'); ?>" target="_blank">
+						<?php esc_html_e('Support Forum','appointment'); ?></a></li>
 					</ul><!-- /.features -->
 				</div><!-- /.plan -->
 			</div>

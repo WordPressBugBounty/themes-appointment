@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Appointment\n"
-"POT-Creation-Date: 2024-04-19 16:45+0530\n"
+"POT-Creation-Date: 2025-11-19 11:49+0530\n"
 "PO-Revision-Date: 2019-04-03 17:38+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -37,136 +37,229 @@ msgstr ""
 msgid "Go Back"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:77 admin/inc/include-companion.php:42
+#: admin/admin-init.php:78 admin/admin-init.php:165
+#: functions/customizer/customizer-header.php:171
+msgid "Default"
+msgstr ""
+
+#: admin/admin-init.php:90
+msgid "Default Elementor"
+msgstr ""
+
+#: admin/admin-init.php:102 admin/admin-init.php:177
+msgid "Business"
+msgstr ""
+
+#: admin/admin-init.php:114 admin/admin-init.php:189
+msgid "Restaurants"
+msgstr ""
+
+#: admin/admin-init.php:126
+msgid "Default Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:138 admin/admin-init.php:201
+msgid "Growkit Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:150 admin/admin-init.php:213
+msgid "Building Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:229
+msgid "Default Pro"
+msgstr ""
+
+#: admin/admin-init.php:241
+msgid "Corporate"
+msgstr ""
+
+#: admin/admin-init.php:253
+msgid "Maintenance"
+msgstr ""
+
+#: admin/admin-init.php:265
+msgid "Education"
+msgstr ""
+
+#: admin/admin-init.php:277
+msgid "Architect"
+msgstr ""
+
+#: admin/admin-init.php:289
+msgid "Finance"
+msgstr ""
+
+#: admin/admin-init.php:301
+msgid "Default Pro Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:313
+msgid "Business Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:325
+msgid "Corporate Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:337
+msgid "Digital Agency Gutenberg"
+msgstr ""
+
+#: admin/admin-init.php:349
+msgid "Architecture Gutenberg"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:78 admin/inc/include-companion.php:42
 #: admin/inc/plugin-include-control.php:40
 msgid "Installing"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:78 admin/inc/include-companion.php:43
+#: admin/inc/class-webriti-about-page.php:79 admin/inc/include-companion.php:43
 #: admin/inc/plugin-include-control.php:41
 #: functions/customizer-notify/appointment-customizer-notify.php:111
 msgid "Activating"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:79 admin/inc/include-companion.php:44
+#: admin/inc/class-webriti-about-page.php:80 admin/inc/include-companion.php:44
 #: admin/inc/plugin-include-control.php:42
 msgid "Error"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:90
+#: admin/inc/class-webriti-about-page.php:91
 msgid "Appointment Panel"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:91
+#: admin/inc/class-webriti-about-page.php:92
 #, php-format
 msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:105
+#: admin/inc/class-webriti-about-page.php:106
 #, php-format
 msgid ""
 "Appointment theme is installed. To take full advantage of the features this "
 "theme has to offer visit our %1$s welcome page %2$s"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:106
+#: admin/inc/class-webriti-about-page.php:107
 msgid "Get started with Appointment Lite"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:234
+#: admin/inc/class-webriti-about-page.php:238
 msgid "Getting Started"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:239
-#: functions/customizer/customizer_recommended_plugin.php:16
+#: admin/inc/class-webriti-about-page.php:243
+#: admin/tab-pages/free_vs_pro.php:16 admin/tab-pages/getting-started.php:11
+msgid "Starter Sites"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:248
+#: functions/customizer/customizer_recommended_plugin.php:17
 msgid "Recommended Actions"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:245
+#: admin/inc/class-webriti-about-page.php:254
 msgid "Video Tutorials"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:253
+#: admin/inc/class-webriti-about-page.php:262
 msgid "Why Upgrade to PRO?"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:260
+#: admin/inc/class-webriti-about-page.php:269
 msgid "Free vs Pro"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:266
+#: admin/inc/class-webriti-about-page.php:275
 msgid "Support"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:272
+#: admin/inc/class-webriti-about-page.php:281
 msgid "CREATE TRUSTWORTHY WEBSITES"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:354
-#, php-format
-msgid "Install %s Now"
-msgstr ""
-
-#: admin/inc/class-webriti-about-page.php:356
-#: admin/inc/include-companion.php:82
-msgid "Install & Activate"
+#: admin/inc/class-webriti-about-page.php:365
+#: admin/tab-pages/free-pro-demo.php:29 admin/tab-pages/free-pro-demo.php:92
+#: admin/tab-pages/free-pro-demo.php:128 class-tgm-plugin-activation.php:2717
+#: functions.php:283
+#: functions/customizer-notify/appointment-customizer-notify-section.php:257
+msgid "Install"
 msgstr ""
 
 #: admin/inc/class-webriti-about-page.php:373
 #, php-format
-msgid "Activate %s Now"
+msgid "Install %s Now"
 msgstr ""
 
 #: admin/inc/class-webriti-about-page.php:375
+#: admin/inc/include-companion.php:82
+msgid "Install & Activate"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:393
+#, php-format
+msgid "Activate %s Now"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:395
 #: class-tgm-plugin-activation.php:2726
-#: functions/customizer/customizer_recommended_plugin.php:19
+#: functions/customizer/customizer_recommended_plugin.php:20
 msgid "Activate"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:378
+#: admin/inc/class-webriti-about-page.php:398
 #: class-tgm-plugin-activation.php:2321
 msgid "Active"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:492
+#: admin/inc/class-webriti-about-page.php:512
 msgid ""
-"It is recommended that you install & activate the Spice Blocks plugin to "
-"import the gutenberg starter sites"
+"It is highly recommended that you install & activate the Spice Starter Sites "
+"plugin to unlock it to build a beautiful website using Elementor and "
+"Gutenberg layouts"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:499
+#: admin/inc/class-webriti-about-page.php:519
 msgid ""
 "It is highly recommended that you install & activate the Webriti Companion "
 "plugin to have access to the advance Frontpage sections and other theme "
 "features"
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:507
-msgid ""
-"It is recommended that you install & activate the Contact Form 7 plugin to "
-"show contact form on pages"
-msgstr ""
-
-#: admin/inc/class-webriti-about-page.php:515
-msgid ""
-"It is recommended that you install & activate the One Click Demo Import "
-"plugin to import the default demo data and starter sites"
-msgstr ""
-
-#: admin/inc/class-webriti-about-page.php:523
-msgid ""
-"It is recommended that you install & activate the Elementor plugin to import "
-"the elementor starter sites"
-msgstr ""
-
-#: admin/inc/class-webriti-about-page.php:532
+#: admin/inc/class-webriti-about-page.php:526
 msgid ""
 "It is recommended that you install & activate the Seo Optimized Images "
 "plugin to dynamically insert SEO Friendly alt attributes and title "
 "attributes to your Images."
 msgstr ""
 
-#: admin/inc/class-webriti-about-page.php:539
+#: admin/inc/class-webriti-about-page.php:534
+msgid ""
+"To enable the display of breadcrumbs, please install and activate this "
+"plugin."
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:542
+msgid ""
+"It is recommended that you install & activate the Spice Blocks plugin to "
+"import the gutenberg starter sites"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:549
+msgid ""
+"It is recommended that you install & activate the Contact Form 7 plugin to "
+"show contact form on pages"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:557
+msgid ""
+"It is recommended that you install & activate the Elementor plugin to import "
+"the elementor starter sites"
+msgstr ""
+
+#: admin/inc/class-webriti-about-page.php:565
 msgid ""
 "To display the posts in a beautiful slider with multiple options, install & "
 "activate this plugin."
@@ -183,7 +276,7 @@ msgid "Install Webriti Companion Now"
 msgstr ""
 
 #: admin/inc/include-companion.php:81 admin/inc/include-companion.php:98
-#: functions.php:338
+#: functions.php:279
 msgid "Webriti Companion"
 msgstr ""
 
@@ -230,12 +323,68 @@ msgstr ""
 msgid "JOIN COURSE"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:12
-msgid "Features"
+#: admin/tab-pages/free-pro-demo.php:59
+msgid "All"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:16 admin/tab-pages/getting-started.php:11
-msgid "Starter Sites"
+#: admin/tab-pages/free-pro-demo.php:90 admin/tab-pages/free-pro-demo.php:122
+msgid "Preview"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:126
+msgid "Buy Now"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:148
+msgid "Demo Import Instructions"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:153
+msgid ""
+"Spice Starter Sites Importer is a plugin that provides a demo import feature "
+"with one click. Follow instructions for better results."
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:157
+msgid "Start with a fresh or reset WordPress installation."
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:158
+msgid "Install & activate all recommended plugins."
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:159
+msgid "Click \"Import Demo Data,\" and wait for the success message."
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:160
+msgid ""
+"Do not re-import to avoid issues; reset WordPress if re-importing is "
+"necessary."
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:161
+msgid "Enjoy your new demo site!"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:163 content-single.php:28
+msgid "Next"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:168
+msgid "Spice Starter Sites Importer"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:172
+msgid "Sorry!"
+msgstr ""
+
+#: admin/tab-pages/free-pro-demo.php:172
+msgid " This Theme is not compatible for this plugins"
+msgstr ""
+
+#: admin/tab-pages/free_vs_pro.php:12
+msgid "Features"
 msgstr ""
 
 #: admin/tab-pages/free_vs_pro.php:17
@@ -259,161 +408,170 @@ msgid "Various Page Templates included in the Appointment Premium Theme"
 msgstr ""
 
 #: admin/tab-pages/free_vs_pro.php:28
+msgid "Search Effect"
+msgstr ""
+
+#: admin/tab-pages/free_vs_pro.php:31
 msgid "Mobile Friendly"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:29
+#: admin/tab-pages/free_vs_pro.php:32
 msgid "Responsive layout in all devices"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:32
+#: admin/tab-pages/free_vs_pro.php:35
 msgid "Contact Form Support"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:35 admin/tab-pages/useful_plugins.php:14
+#: admin/tab-pages/free_vs_pro.php:38 admin/tab-pages/useful_plugins.php:14
 msgid "SEO Friendly URL"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:36
+#: admin/tab-pages/free_vs_pro.php:39
 msgid ""
 "This feature allows you to rename the custom post type slug names in the URL."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:39 admin/tab-pages/useful_plugins.php:75
+#: admin/tab-pages/free_vs_pro.php:42 admin/tab-pages/useful_plugins.php:75
 msgid "Multiple Color Schemes"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:40
+#: admin/tab-pages/free_vs_pro.php:43
 msgid ""
 "Enjoy using the 13 preset color schemes. You can also create custom skins "
 "without adding any code."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:43
+#: admin/tab-pages/free_vs_pro.php:46
 msgid "Typography"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:44
+#: admin/tab-pages/free_vs_pro.php:47
 msgid ""
 "You can change the typography of the theme like font-family, font size, etc."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:47
+#: admin/tab-pages/free_vs_pro.php:50
 msgid "Google Maps"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:48
+#: admin/tab-pages/free_vs_pro.php:51
 msgid ""
 "Display your Shop and Business location on your website using Google Maps."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:51
+#: admin/tab-pages/free_vs_pro.php:54
 msgid "Portfolio"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:52
+#: admin/tab-pages/free_vs_pro.php:55
 msgid ""
 "Present your project/portfolio collection with 2 column, 3 column and 4 "
 "column layouts. You can also display your project/portfolio by category."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:55
+#: admin/tab-pages/free_vs_pro.php:58
 msgid "About Us Page"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:56
+#: admin/tab-pages/free_vs_pro.php:59
 msgid ""
 "Show team members, your clients and custom content added in the WordPress "
 "editor."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:59
+#: admin/tab-pages/free_vs_pro.php:62
 msgid "Services Page"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:60
+#: admin/tab-pages/free_vs_pro.php:63
 msgid "Show all your services in a single place."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:63
+#: admin/tab-pages/free_vs_pro.php:66
 msgid "Testimonial / Review Section"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:64
+#: admin/tab-pages/free_vs_pro.php:67
 msgid "Show user feedback on the Homepage and Services page."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:67
+#: admin/tab-pages/free_vs_pro.php:70
 msgid "WPML / Polylang Support"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:68
+#: admin/tab-pages/free_vs_pro.php:71
 msgid "With the help of WPML, you can make a Multilingual Website."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:71
+#: admin/tab-pages/free_vs_pro.php:74 admin/tab-pages/free_vs_pro.php:129
 msgid "Support Forum"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:72
+#: admin/tab-pages/free_vs_pro.php:75
 msgid "Get instant 24/7 support on our Support Forum."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:80
+#: admin/tab-pages/free_vs_pro.php:83
 msgid "Free"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:84
+#: admin/tab-pages/free_vs_pro.php:87
 msgid ""
 "Slider [Unlimited Slides], Widget Area Below Slider, Services [6 Services], "
 "Callout Section, Latest News"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:85
+#: admin/tab-pages/free_vs_pro.php:88
 msgid "Homepage Template and Full-Width Page Template"
 msgstr ""
 
 #: admin/tab-pages/free_vs_pro.php:89
+msgid "Toggle Search"
+msgstr ""
+
+#: admin/tab-pages/free_vs_pro.php:93
 msgid "Custom color skin"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:97
+#: admin/tab-pages/free_vs_pro.php:101
 msgid "WordPress Support Forum"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:104
+#: admin/tab-pages/free_vs_pro.php:108
 msgid "Pro"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:108
+#: admin/tab-pages/free_vs_pro.php:112
 msgid ""
 "Top Header, Slider [Unlimited Slides], Services [9 Services], Callout, "
 "Portfolio [Unlimited Projects], Latest News, Clients, Testimonials and "
 "Custom Widgets"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:110
+#: admin/tab-pages/free_vs_pro.php:114
 msgid ""
 "About Us, Services, Portfolio, Blog Left & Right Sidebars, Blog Full Width, "
 "Page Full Width, Contact Page and much more."
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:114
+#: admin/tab-pages/free_vs_pro.php:116
+msgid ""
+"There are Three types of search effect, Toggle Search with ajax live search, "
+"Lightbox Search With Dark Mode and last one is Lightbox Search With Light "
+"Mode"
+msgstr ""
+
+#: admin/tab-pages/free_vs_pro.php:120
 msgid "Custom color skin + 13 Preset color schemes"
 msgstr ""
 
-#: admin/tab-pages/free_vs_pro.php:123
-msgid "Webriti Support Forum"
-msgstr ""
-
-#: admin/tab-pages/free_vs_pro.php:131
+#: admin/tab-pages/free_vs_pro.php:137
 msgid "Get Appointment PRO Now!"
 msgstr ""
 
 #: admin/tab-pages/getting-started.php:14
-msgid ""
-"To use Starter Sites, you need to activate the <strong>Webriti Companion</"
-"strong> and <strong>One Click Demo Import</strong> plugins."
+msgid "To use Starter Sites, you need to import demo."
 msgstr ""
 
 #: admin/tab-pages/getting-started.php:15
@@ -436,7 +594,10 @@ msgid "Start Customizing"
 msgstr ""
 
 #: admin/tab-pages/getting-started.php:33
-msgid "After activating recommended plugins , now you can start customization."
+msgid ""
+"If you prefer not to use our prebuilt starter sites and want to create a "
+"website from scratch, you can use the Customizer option. After activating "
+"the recommended plugins, you can begin customizing your website."
 msgstr ""
 
 #: admin/tab-pages/getting-started.php:36
@@ -676,15 +837,15 @@ msgstr ""
 msgid "Change Typograpgy"
 msgstr ""
 
-#: appointment_theme_setup_data.php:28
+#: appointment_theme_setup_data.php:29
 msgid "Uncategorized"
 msgstr ""
 
-#: appointment_theme_setup_data.php:29
+#: appointment_theme_setup_data.php:30
 msgid "slide"
 msgstr ""
 
-#: appointment_theme_setup_data.php:77
+#: appointment_theme_setup_data.php:78
 #: functions/customizer/customizer-copyright.php:24
 msgid "Proudly powered by <a href=\"https://wordpress.org\">WordPress</a>"
 msgstr ""
@@ -1050,10 +1211,6 @@ msgstr ""
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2717
-msgid "Install"
-msgstr ""
-
 #: class-tgm-plugin-activation.php:2723
 msgid "Update"
 msgstr ""
@@ -1242,7 +1399,7 @@ msgstr ""
 msgid "Leave a Reply"
 msgstr ""
 
-#: content-single.php:17 content.php:17 functions.php:256 functions.php:272
+#: content-single.php:17 content.php:17 functions.php:193 functions.php:209
 msgid "Read More"
 msgstr ""
 
@@ -1250,34 +1407,35 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: content-single.php:28
-msgid "Next"
-msgstr ""
-
 #: elementor-slider-fullwidth.php:15
 msgid "To show the slider, you have to activate the companion plugin."
 msgstr ""
 
-#: functions.php:177
+#: functions.php:114
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:231 functions/breadcrumbs/breadcrumbs.php:136
+#: functions.php:168 functions/breadcrumbs/breadcrumbs.php:136
 #: functions/breadcrumbs/breadcrumbs.php:142
 msgid "Page"
 msgstr ""
 
-#: functions.php:335
+#: functions.php:276
 #, php-format
 msgid "Thank you for installing the %1$s theme."
 msgstr ""
 
-#: functions.php:337
+#: functions.php:278
 msgid "We highly recommend you to install and activate the"
 msgstr ""
 
-#: functions.php:340
+#: functions.php:281
 msgid "This plugin will unlock enhanced features to build a beautiful website."
+msgstr ""
+
+#: functions.php:283
+#: functions/customizer-notify/appointment-customizer-notify-section.php:257
+msgid "webriti-companion"
 msgstr ""
 
 #: functions/breadcrumbs/breadcrumbs.php:55
@@ -1290,6 +1448,10 @@ msgstr ""
 
 #: functions/breadcrumbs/breadcrumbs.php:128
 msgid "Articles posted by"
+msgstr ""
+
+#: functions/customizer-notify/appointment-customizer-notify-section.php:252
+msgid "Webriti Comapnion"
 msgstr ""
 
 #: functions/customizer/customizer-copyright.php:8
@@ -1376,8 +1538,13 @@ msgstr ""
 msgid "and"
 msgstr ""
 
-#: functions/customizer/customizer-header.php:171
-msgid "Default"
+#: functions/customizer/customizer-header.php:181 header.php:90 header.php:101
+#: searchform.php:2
+msgid "Search"
+msgstr ""
+
+#: functions/customizer/customizer-header.php:199
+msgid "Disable Search Icon"
 msgstr ""
 
 #: functions/customizer/customizer-news.php:9
@@ -1574,22 +1741,22 @@ msgstr ""
 msgid "Related Post Title "
 msgstr ""
 
-#: functions/customizer/customizer_recommended_plugin.php:12
+#: functions/customizer/customizer_recommended_plugin.php:13
 #, php-format
 msgid ""
 "Install and activate the %s plugin to take full advantage of all the "
 "features this theme has to offer."
 msgstr ""
 
-#: functions/customizer/customizer_recommended_plugin.php:17
+#: functions/customizer/customizer_recommended_plugin.php:18
 msgid "Recommended Plugin"
 msgstr ""
 
-#: functions/customizer/customizer_recommended_plugin.php:18
+#: functions/customizer/customizer_recommended_plugin.php:19
 msgid "Install and Activate"
 msgstr ""
 
-#: functions/customizer/customizer_recommended_plugin.php:20
+#: functions/customizer/customizer_recommended_plugin.php:21
 msgid "Deactivate"
 msgstr ""
 
@@ -1873,8 +2040,8 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:80
-msgid "Toggle navigation"
+#: header.php:99
+msgid "Search …"
 msgstr ""
 
 #: index-banner.php:15
@@ -1889,10 +2056,6 @@ msgstr ""
 msgid ""
 "Sorry, but nothing matched your search criteria. Please try again with some "
 "different keywords."
-msgstr ""
-
-#: searchform.php:2
-msgid "Search"
 msgstr ""
 
 #: single.php:17

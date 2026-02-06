@@ -46,7 +46,7 @@ if ($appointment_news_setting['home_blog_enabled'] == 0 || $appointment_news_set
                         <div class="blog-sm-area">
                             <div class="media">
                                 <div class="blog-sm-box">
-                                    <?php $appointment_defalt_arg = array('class' => "img-responsive"); ?>
+                                    <?php $appointment_defalt_arg = array('class' => "img-fluid"); ?>
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('', $appointment_defalt_arg); ?>
                                     <?php endif; ?>

@@ -5,9 +5,9 @@ Author: Webriti
 Author URI: https://www.webriti.com
 Description: Appointment WordPress Theme is a fully responsive and translation-ready theme that allows you to create stunning blogs and websites. The theme is well suited for companies, law firms, travel, photography, recipes, design, art, personal and any other creative websites and blogs. The theme is developed using Bootstrap 3 that makes it mobile and tablet friendly. It has various options in the WordPress Customizer to change the look of the theme. The theme customizer can be used to add your own custom header, favicon, logo, slides, services, callout and much more. In the premium version you can add different type of slides like video, aside, quote, status and standard, all of which have a different HTML look. There are a number of in-built widgets; sidebars with support for WPML, the Polylang translation WordPress plugin and Contact Form 7; a portfolio template, contact us, portfolio column layouts and many sections for business using the Homepage template. Appointment theme comes with various locales and this theme is General Data Protection Regulation ready as it comes with WP GDPR Compliant Just navigate to Appearance / Customize to start customizing.
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post, custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
-Version: 3.5.4.1
+Version: 3.5.5
 Requires at least: 4.5
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.4
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 License: GPLv2 or later
@@ -155,7 +155,7 @@ h6, .h6 {
 --------------------------------------------------------------*/
 #carousel-example-generic .active > div { display: block; }
 .carousel-indicators li, .carou-direction-nav li { padding: 0; }
-.homepage-mycarousel .carousel-inner > .item > img { display: block; margin: 0 auto; }
+.homepage-mycarousel .carousel-inner > .carousel-item > img { display: block; margin: 0 auto; }
 .carousel-indicators { margin-bottom: 0; }
 .slide-caption {
     height: auto;
@@ -326,13 +326,13 @@ h1{ display: inline-block;margin-bottom: 0; }
 .navbar-brand{padding: 0;}
 
 @media (max-width:768px){
-  .navbar-header{text-align: center;}
+  .navbar-header{text-align: center;width: 100%;}
 }
 
 /*--------------------------------------------------------------
 6.0 Slider Fade Effect
 --------------------------------------------------------------*/
-.carousel.carousel-fade .item {
+.carousel.carousel-fade .carousel-item {
     -webkit-transition: opacity 0.6s ease-in-out;
     -moz-transition: opacity 0.6s ease-in-out;
     -o-transition: opacity 0.6s ease-in-out;
@@ -342,7 +342,7 @@ h1{ display: inline-block;margin-bottom: 0; }
     left: 0 !important;
 }
 
-.carousel.carousel-fade .active.item {
+.carousel.carousel-fade .active.carousel-item {
     opacity:1;
 }
 
@@ -461,7 +461,7 @@ h1{ display: inline-block;margin-bottom: 0; }
     font-weight:600;
     font-size: 24px;
     letter-spacing: 0px;
-    line-height: 27px;
+    line-height: 28px;
     margin: 0 0 12px;
 }
 .service-area p {
@@ -471,7 +471,7 @@ h1{ display: inline-block;margin-bottom: 0; }
     font-weight:400;
     font-size: 15px;
     letter-spacing: 0.2px;
-    line-height: 25px;
+    line-height: 30px;
     margin: 0;
 }
 .service-img-box {
@@ -1988,14 +1988,14 @@ div.wpcf7-validation-errors {
     padding: 20px;
 }
 
-.head-contact-social li > a,.footer-contact-social li > a{padding: 0.75rem;}
-a.img-responsive{margin: 1px;}
+/*.head-contact-social li > a,.footer-contact-social li > a{padding: 0.75rem;}*/
+a.img-fluid{margin: 1px;}
 .dropdown-toggle:focus{outline: thin dotted !important;
     outline: 5px auto -webkit-focus-ring-color !important;
     outline-offset: -2px;}
 
 .nav .open > a:focus,.dropdown-menu > .active.open > a:focus,input:focus, button:focus, select:focus, textarea:focus {
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ring-color !important;
     outline: thin dotted;
     outline-offset: -2px;
 }
@@ -2016,7 +2016,7 @@ a.img-responsive{margin: 1px;}
     outline-offset: -2px;
 }
 .search_widget_input{margin: 1px;}
-@media (max-width: 1100px){
+@media (max-width: 992px){
 .caret {
      position: absolute;
     right: 0;
@@ -2024,9 +2024,9 @@ a.img-responsive{margin: 1px;}
     margin-right: 10px;
 }}
 @media (max-width: 600px) {.callout-section h2{padding: 0 25px;}}
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 .navbar-nav li.dropdown-submenu .caret{ float: right; border: none;}
-.navbar-nav li.dropdown-submenu .caret:after{ content: "\f0da"; font-family: "FontAwesome";font-size: 10px;}}​
+.navbar-nav li.dropdown-submenu .caret:after{ content: "\f0da"; font-family: "FontAwesome";font-size: 10px;}}
 .blocks-gallery-grid.is-cropped .blocks-gallery-image a, .blocks-gallery-grid.is-cropped .blocks-gallery-image img, .blocks-gallery-grid.is-cropped .blocks-gallery-item a, .blocks-gallery-grid.is-cropped .blocks-gallery-item img, .wp-block-gallery.is-cropped .blocks-gallery-image a, .wp-block-gallery.is-cropped .blocks-gallery-image img, .wp-block-gallery.is-cropped .blocks-gallery-item a, .wp-block-gallery.is-cropped .blocks-gallery-item img{
 display:block;
 }
@@ -2481,7 +2481,6 @@ div#wc_appointment_post_slider {
     padding: 10px 0rem 10px 16px;
     vertical-align: middle;
     position: relative;
-    top: 50%;
 }
 .navbar .search-box-outer .dropdown-menu {
     top: 50px !important;
@@ -2516,7 +2515,7 @@ div#wc_appointment_post_slider {
     background: none;
 }
 .search-panel .form-container {
-    padding: 10px 0 2px 0;
+    padding: 10px 0 5px 0;
 }
 .search-form {
     width: 100%;
@@ -2568,3 +2567,13 @@ div#wc_appointment_post_slider {
         position: relative !important;
     }
 }
+.blog-sm-box img {width: 200px;height: auto;}
+.blog-lg-box img,.related-post-image {height: auto;width: 100%;}
+/*@media (min-width: 1200px) {body .container {max-width: 1170px;}}*/
+.search-icon.dropdown-toggle:after{display: none;}
+body a{text-decoration: none;}
+@media (max-width: 1100px) {.navbar-default .dropdown-menu > li.panel-outer {position: relative;}}
+.caret {display: inline-block;width: 0;height: 0;margin-left: 2px;vertical-align: middle;border-top: 4px solid;border-right: 4px solid transparent;border-left: 4px solid transparent;}
+.open > .dropdown-menu {display: block;}
+@media (min-width: 1200px) {body .container {max-width: 1170px;}}
+@media (max-width:600px){.homepage-mycarousel .carousel-inner > .carousel-item > img {max-width: unset;}

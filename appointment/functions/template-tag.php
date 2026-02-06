@@ -35,7 +35,7 @@ function appointment_post_thumbnail($preset,$class){
 if(has_post_thumbnail()){ 
  $defalt_arg =array('class' => $class); ?>
 			<div class="blog-lg-box">
-				<a class ="img-responsive" <?php if( !is_single() ){ ?> href="<?php the_permalink(); ?>" <?php } ?> title="<?php the_title_attribute(); ?>" >
+				<a class ="img-fluid" <?php if( !is_single() ){ ?> href="<?php the_permalink(); ?>" <?php } ?> title="<?php the_title_attribute(); ?>" >
 				<?php the_post_thumbnail($preset, $defalt_arg); ?>
                                 </a>
 			</div>

@@ -20,7 +20,7 @@
         <?php wp_body_open(); ?>
         <a class="skip-link screen-reader-text" href="#wrap"><?php esc_html_e('Skip to content', 'appointment'); ?></a>
         <!--Logo & Menu Section-->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-expand-lg navbar-right">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -37,7 +37,7 @@
                         } if ($appointment_header_setting['enable_header_logo_text'] == '' && $appointment_logo != '') {
                             ?>
                             <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home" >
-                                <img class="img-responsive" src="<?php echo esc_url($appointment_logo); ?>" style="height:50px; width:200px;" alt="<?php
+                                <img class="img-fluid" src="<?php echo esc_url($appointment_logo); ?>" style="height:50px; width:200px;" alt="<?php
                     if (!empty($appointment_logo_alt)) {
                         echo esc_attr($appointment_logo_alt);
                     } else {
@@ -76,12 +76,9 @@
                         <?php endif; 
                         }?>
                     </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only"><?php esc_html_e('Toggle navigation', 'appointment'); ?></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                     </button>
                 </div>
 
                 <?php
@@ -156,7 +153,7 @@
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'container' => '',
-                        'menu_class' => 'nav navbar-nav navbar-right',
+                        'menu_class' => 'nav navbar-nav ms-auto',
                         'fallback_cb' => 'appointment_fallback_page_menu',
                         'items_wrap' => $appointment_header_social,
                         'walker' => new appointment_nav_walker()

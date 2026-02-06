@@ -16,7 +16,7 @@ get_template_part('index', 'banner');
                         <!--Blog Author-->
                         <div class="comment-title"><h3><?php esc_html_e('About the author', 'appointment'); ?></h3></div>
                         <div class="blog-author">
-                            <div class="media">
+                            <div class="media d-flex">
                                 <div class="pull-left">
                                     <?php echo get_avatar(get_the_author_meta('ID'), 200); ?>
                                 </div>

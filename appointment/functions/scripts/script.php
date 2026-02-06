@@ -7,10 +7,12 @@ function appointment_scripts() {
     $current_options = wp_parse_args(  get_option( 'appointment_options', array() ), $appointment_options );
 
     wp_enqueue_style('appointment-style', get_stylesheet_uri());
+    
+
     wp_style_add_data('appointment-style', 'rtl', 'replace');
-    wp_enqueue_style('appointment-bootstrap-css', APPOINTMENT_TEMPLATE_DIR_URI . '/css/bootstrap.css');
+    wp_enqueue_style('appointment-bootstrap-css',APPOINTMENT_TEMPLATE_DIR_URI.'/css/bootstrap.css');
     wp_style_add_data( 'appointment-bootstrap-css', 'rtl', 'replace' );
-    if($current_options['link_color_enable'] == true) {
+   if($current_options['link_color_enable'] == true) {
 		    appointment_custom_light();
 		}
 		else {
@@ -28,7 +30,7 @@ function appointment_scripts() {
     wp_style_add_data('appointment-media-responsive-css', 'rtl', 'replace');
     /* Bootstrap Js */
     wp_enqueue_script('jquery');
-    wp_enqueue_script('appointment-bootstrap-js', APPOINTMENT_TEMPLATE_DIR_URI . '/js/bootstrap.min.js');
+    wp_enqueue_script('appointment-bootstrap-js', APPOINTMENT_TEMPLATE_DIR_URI . '/js/bootstrap.bundle.min.js');
     wp_enqueue_script('appointment-menu-js', APPOINTMENT_TEMPLATE_DIR_URI . '/js/menu/menu.js');
     wp_enqueue_script('appointment-page-scroll-js', APPOINTMENT_TEMPLATE_DIR_URI . '/js/page-scroll.js');
     wp_enqueue_script('appointment-carousel-js', APPOINTMENT_TEMPLATE_DIR_URI . '/js/carousel.js');
