@@ -1,10 +1,10 @@
 === Appointment ===
 
-Contributors: priyanshumittal
+Contributors: priyanshumittal, freemius
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post,custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
 Requires at least: 4.5
-Tested up to: 6.8
-Stable tag: 3.5.5
+Tested up to: 6.9
+Stable tag: 3.7.3
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,11 +30,15 @@ In WordPress 5.8, the default widget title is showing in the H2 tag if you want 
 
 == License ==
 
-Appointment WordPress Theme, Copyright (C) 2013-2025, priyanshumittal
+Appointment WordPress Theme, Copyright (C) 2013-2026, priyanshumittal
 Appointment is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+@version 3.7.3
+1. Introduced Freemius opt-in and licensing system.
+2. Premium features can now be activated via license key.
+3. Fixed some minor bugs.
 @version 3.5.5
 1. Updated bootstrap 5.3.6.
 @version 3.5.4.1
@@ -463,4 +467,4 @@ License: Under the terms of the GNU General Public License
 Source: https://wordpress.org/plugins/elementor/
 
 * Images on /images and /admin/assets/img folder
-Copyright (C) 2013-2025, Webriti and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright (C) 2013-2026, Webriti and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
