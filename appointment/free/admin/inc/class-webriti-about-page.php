@@ -79,6 +79,7 @@ if (!class_exists('Appointment_About_Page')) {
 					'activating' => esc_html__('Activating', 'appointment'),
 					'error'      => esc_html__('Error', 'appointment'),
 					'ajax_url'   => esc_url(admin_url('admin-ajax.php')),
+					'nonce'      => wp_create_nonce('appointment_rec_acts_nonce'),
 				)
 			);
 		}
@@ -428,6 +429,7 @@ if (!class_exists('Appointment_About_Page')) {
 		}
 
 		public function update_recommended_actions_watch() {
+			check_ajax_referer( 'appointment_rec_acts_nonce', 'security' );
 			if (isset($_POST['action_id'])) {
 				$action_id    = sanitize_text_field($_POST['action_id']);
 				$actions_todo = get_option('recommending_actions', array());

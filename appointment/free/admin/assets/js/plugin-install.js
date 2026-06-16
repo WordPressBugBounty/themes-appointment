@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
             $.ajax({
                 url: this_obj.ajax_url,
                 type: 'POST',
-                data: {action: 'appointment_update_rec_acts', action_id:action_id},
+				data: {action: 'appointment_update_rec_acts', action_id:action_id, security: this_obj.nonce},
                 success:function(data) {
                     if($icon.hasClass('dashicons-visibility')){
                         $icon.removeClass('dashicons-visibility');

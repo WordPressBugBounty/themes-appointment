@@ -123,6 +123,7 @@ if (!function_exists('webriti_companion') && !$appointment_install) {
 }
 
 function appointment_hide_customizer_companion_notice(){
+		check_ajax_referer( 'appointment_hide_notice_nonce', 'security' );
 	update_option('appointment_hide_customizer_companion_notice', true);
 	echo true;
 	wp_die();

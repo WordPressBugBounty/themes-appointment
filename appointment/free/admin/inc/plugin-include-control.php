@@ -89,6 +89,7 @@ if (class_exists('WP_Customize_Control') && !class_exists('appointment_Plugin_In
 }
 
 function appointment_hide_customizer_notice() {
+	check_ajax_referer( 'appointment_hide_notice_nonce', 'security' );
     if (isset($_POST['webriti_plugin_slug']) && !empty($_POST['webriti_plugin_slug'])) {
         $plugin_slug = sanitize_text_field($_POST['webriti_plugin_slug']);
         update_option('appointment_hide_customizer_notice_' . $plugin_slug, true);

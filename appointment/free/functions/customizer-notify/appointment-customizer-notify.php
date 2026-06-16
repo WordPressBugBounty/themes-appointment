@@ -139,7 +139,7 @@ class appointment_Customizer_Notify extends \stdClass {
 
 	
 	public function customizer_notify_dismiss_recommended_action_callback() {
-
+          check_ajax_referer( 'appointment_customizer_notify_nonce', 'security' );
 		global $appointment_customizer_notify_recommended_actions;
 
 		$action_id = ( isset( $_GET['id'] ) ) ? $_GET['id'] : 0;
@@ -182,6 +182,7 @@ class appointment_Customizer_Notify extends \stdClass {
 
 	
 	public function customizer_notify_dismiss_recommended_plugins_callback() {
+    check_ajax_referer( 'appointment_customizer_notify_nonce', 'security' );
 
 		$action_id = ( isset( $_GET['id'] ) ) ? $_GET['id'] : 0;
 

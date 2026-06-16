@@ -66,7 +66,7 @@ function appointment_customizer_css() {
 add_action('after_setup_theme', 'appointment_setup');
 //About Theme
 add_action( 'init', function() {
-    $appointment_theme = wp_get_theme(); // Gets the current theme
+	$appointment_theme = wp_get_theme(); // Gets the current theme
     if ( 'Appointment' == $appointment_theme->name  || 'Appointment Pro' == $appointment_theme->name ) {
         if ( is_admin() ) {
             require APPOINTMENT_TEMPLATE_DIR . '/free/admin/admin-init.php';
@@ -272,9 +272,20 @@ if( $appointment_theme->name == 'Appointment' || $appointment_theme->name == 'Ap
         }
     }
     add_action( 'admin_notices', 'appointment_admin_plugin_notice_warn' );
+	
+	    // Localize nonce for the dismissed-notice AJAX call. Added new code by akhilesh 
+    add_action( 'admin_enqueue_scripts', function() {
+        wp_localize_script( 'jquery', 'appointmentNoticeAjax', array(
+            'ajax_url' => admin_url( 'admin-ajax.php' ),
+            'nonce'    => wp_create_nonce( 'appointment_dismissed_notice_nonce' ),
+        ) );
+    } );
+
     add_action( 'wp_ajax_dismissed_notice_handler', 'appointment_ajax_notice_handler');
 
     function appointment_ajax_notice_handler() {
+		//added by akhilesh 
+		check_ajax_referer( 'appointment_dismissed_notice_nonce', 'security' );
         update_option( 'dismissed-appointment_comanion_plugin', TRUE );
     }
 
@@ -386,6 +397,7 @@ if( $appointment_theme->name == 'Appointment' || $appointment_theme->name == 'Ap
 add_action('wp_ajax_appointment_check_plugin_status', 'appointment_check_plugin_status');
 
 function appointment_check_plugin_status() {
+	check_ajax_referer( 'plugin_installer_nonce', '_ajax_nonce' );
     if (!current_user_can('install_plugins')) {
         wp_send_json_error('You do not have permission to manage plugins.');
         return;
@@ -416,6 +428,8 @@ function appointment_check_plugin_status() {
 add_action('wp_ajax_appointment_install_activate_plugin', 'appointment_install_and_activate_plugin');
 
 function appointment_install_and_activate_plugin() {
+	//Added by akhilesh
+	 check_ajax_referer( 'plugin_installer_nonce', '_ajax_nonce' );
     if (!current_user_can('install_plugins')) {
         wp_send_json_error('You do not have permission to install plugins.');
         return;
