@@ -4,7 +4,7 @@ Contributors: priyanshumittal, freemius
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, sticky-post,custom-menu, translation-ready, rtl-language-support, blog, footer-widgets, featured-images, news
 Requires at least: 4.5
 Tested up to: 7.0
-Stable tag: 3.7.4
+Stable tag: 3.7.5
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,8 @@ Appointment is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+@version 3.7.5
+1. Fixed the slider autoplay and front page Portfolio section issues in PRO.
 @version 3.7.4
 1. Fixed Security vulnerability CSRF issue.
 @version 3.7.3
